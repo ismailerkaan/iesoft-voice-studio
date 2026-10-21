@@ -1,0 +1,8 @@
+.venv/
+data/
+outputs/
+frontend/node_modules/
+frontend/dist/
+__pycache__/
+.DS_Store
+frontend/*.tsbuildinfo

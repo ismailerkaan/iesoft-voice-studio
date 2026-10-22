@@ -55,6 +55,19 @@ iesoft() {
 }
 ```
 
+## Windows (CPU)
+
+Test: Windows 11, Ryzen 5 4600H, 16 GB RAM, Python 3.13, Node 24, FFmpeg (winget). GPU hızlandırma yok; kısa bir cümle ~35–40 sn.
+
+```powershell
+py -3.13 -m venv .venv
+# requirements.lock.txt kurulumu setup.sh'teki üç adımla aynı (.venv\Scripts\python.exe -m pip ...)
+cd frontend; npm ci; npm run build; cd ..
+scripts\launch.bat
+```
+
+`launch.ps1`, `HF_HOME` tanımlı değilse model önbelleğini proje klasörünün bir üstündeki `.cache\huggingface` içine koyar.
+
 ## Model dosyaları
 
 Hugging Face deposu `ResembleAI/chatterbox`, standart önbellek `~/.cache/huggingface/hub` (değiştirmek için `HF_HOME`).
